@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research | Quiroz Research Group</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Quiroz Research Group</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="members.html">Members</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Quiroz Research Group</h1>
+
+      <p class="research-text">
+        We work on a variety of technologies that support the transition to a
+        more sustainable energy and resource future. Our research focuses on
+        understanding and improving the economic viability and environmental
+        impact of emerging technologies through process modeling,
+        techno-economic analysis, and life-cycle assessment. Our work spans a
+        wide range of applications such as biofuels, biorefining, carbon capture
+        and storage, desalination, wastewater treatment, algae systems, and many
+        more.
+      </p>
+
+      <div class="diagram-container">
+        <img
+          src="research.jpeg"
+          alt="Research Overview Diagram showing Techno-economic analysis and Life-cycle assessment flows"
+          class="research-diagram"
+        />
+      </div>
+
+      <p class="research-text">
+        Ultimately, our work helps define technical targets for new technologies
+        and identify system designs that minimize both costs and environmental
+        impacts. We aim to inform technology commercialization, industry
+        decision-making, and policy development through data-driven cost
+        analysis and carbon accounting.
+      </p>
+
+      <div class="course-section">
+        <h3>Research Interests</h3>
+        <ul>
+          <li>Technology Assessment</li>
+          <li>Energy Systems Optimization</li>
+          <li>Food-Water-Energy Nexus</li>
+          <li>Carbon Markets</li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Dr. Quiroz - Ohio University.</p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

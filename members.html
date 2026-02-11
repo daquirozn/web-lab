@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Members | Quiroz Research Group</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Quiroz Research Group</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="members.html">Members</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Members</h1>
+      <p>
+        We are currently looking for motivated master’s and Ph.D.students who
+        are interested in sustainability modeling.
+      </p>
+
+      <div class="team-list">
+        <div class="member-card">
+          <img src="me.jpeg" alt="PI Photo" class="member-photo" />
+          <div class="member-info">
+            <h3>David Quiroz</h3>
+            <p class="member-role">Principal Investigator</p>
+            <p class="member-email">
+              <a href="mailto:dquiroz@ohio.edu">dquiroz@ohio.edu</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="member-card">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+            alt="Student Photo"
+            class="member-photo"
+          />
+          <div class="member-info">
+            <h3>Maria Flores</h3>
+            <p class="member-role">Master's Student</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Dr. Quiroz - Ohio University.</p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

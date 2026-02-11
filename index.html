@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Quiroz Research Group</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Quiroz Research Group</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="members.html">Members</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div class="profile-header">
+        <img src="me.jpeg" alt="Dr. Quiroz Profile Image" class="profile-img" />
+
+        <div class="profile-info">
+          <h3>Brief Bio</h3>
+          <p>
+            Dr. David Quiroz is an assistant professor in Mechanical Engineering
+            at Ohio University. He earned his Ph.D. in Mechanical Engineering
+            from Colorado State University, where he also served as a graduate
+            intern at the National Laboratory of the Rockies. His research
+            focuses on assessing the sustainability of emerging technologies
+            through process modeling, techno economic analysis, and life cycle
+            assessment. His work spans a range of systems including biofuels,
+            mineral recovery, desalination, and waste to energy processes, all
+            aimed at advancing a more sustainable energy and resource future.
+          </p>
+          <h3>Contact</h3>
+          <p>
+            <strong>Email:</strong>
+            <span class="member-email">
+              <a href="mailto:dquiroz@ohio.edu">dquiroz@ohio.edu</a>
+              <br />
+            </span>
+            <strong>Phone:</strong> 740-597-9626 <br />
+            <span class="cv-link">
+              <a href="cv.pdf">🔗CV</a>
+            </span>
+          </p>
+        </div>
+      </div>
+
+      <section>
+        <p>
+          <span>
+            <strong>For Prospective Students:</strong>
+            I am always excited to work with motivated master’s and Ph.D.
+            students who are interested in sustainability modeling. If you’d
+            like to join my research group, you’re welcome to email me your CV.
+          </span>
+        </p>
+      </section>
+
+      <div class="course-section">
+        <h3>Teaching</h3>
+        <ul>
+          <li>Fall 2025, ME4820/5820: Life Cycle Assessment</li>
+          <li>
+            Spring 2025, ME4210: Applied Thermal System Design and Analysis
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Dr. Quiroz - Ohio University. All rights reserved.</p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publications - Dr. Quiroz | Quiroz Research Group</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="index.html" class="nav-logo">Quiroz Research Group</a>
+
+      <button class="menu-toggle" aria-label="Abrir menú">&#9776;</button>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="publication.html">Publications</a></li>
+        <li><a href="members.html">Members</a></li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <h1>Selected Publications</h1>
+      <p>
+        A list of selected peer-reviewed journal articles and conference
+        proceedings.
+      </p>
+      <p>
+        For a full list of my publications, visit my
+        <a
+          class="pub-link"
+          href="https://scholar.google.com/citations?user=SoVfvTkAAAAJ&hl=en"
+        >
+          Google Scholar
+        </a>
+        page.
+      </p>
+
+      <div id="publications-list"></div>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Dr. Quiroz - Ohio University.</p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        if (menuToggle && navLinks) {
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

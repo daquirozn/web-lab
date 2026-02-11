@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* --- NAVBAR & MENU HAMBURGUESA --- */
+nav {
+  background-color: #00694e;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 70px;
+}
+
+.nav-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Estilos del botón hamburguesa (Oculto por defecto en PC) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+  height: 100%;
+  align-items: center;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+
+.nav-links li a:hover,
+.nav-logo:hover {
+  color: #d6d2c4;
+}
+
+/* --- VISTA MÓVIL (Celulares y Tablets pequeñas) --- */
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  /* 1. Mostrar el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* 2. Ocultar la lista de enlaces por defecto */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  min-height: 80vh;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* --- PERFIL (HOME) --- */
+.profile-header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-img {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 3px solid #00694e;
+  flex-shrink: 0;
+}
+
+.profile-info h3 {
+  margin-top: 0;
+  color: #00694e;
+}
+
+.cv-link a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+/* --- RESPONSIVIDAD DEL PERFIL --- */
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-bottom: 20px;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+}
+
+/* --- TIPOGRAFÍA Y TEXTOS --- */
+h1 {
+  color: #00694e;
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+
+h2 {
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+/* --- PUBLICACIONES --- */
+.pub-item {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.pub-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #00694e;
+}
+.pub-authors {
+  font-style: italic;
+  color: #555;
+}
+.pub-venue {
+  color: #666;
+}
+
+.pub-link {
+  color: #00694e;
+  text-decoration: none;
+}
+
+#publications-list {
+  margin-top: 30px;
+}
+
+/* --- MEMBERS / TEAM --- */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.member-card {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  align-items: flex-start;
+}
+
+.member-card:last-child {
+  border-bottom: none;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 2px solid #00694e;
+  flex-shrink: 0;
+}
+
+.member-info h3 {
+  margin-top: 0;
+  color: #00694e;
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-weight: bold;
+  color: #555;
+  margin: 0 0 5px 0;
+}
+
+.member-email a {
+  color: #00694e;
+  text-decoration: none;
+}
+
+/* Responsividad de Miembros */
+@media (max-width: 600px) {
+  .member-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* --- RESEARCH PAGE --- */
+.research-text {
+  font-size: 1.1rem;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* En celular, quitar justificado para evitar ríos de blanco */
+@media (max-width: 600px) {
+  .research-text {
+    text-align: left;
+  }
+}
+
+.diagram-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.research-diagram {
+  width: 100%;
+  max-width: 800px;
+  height: auto; /* IMPORTANTE: Mantiene la proporción al reducirse */
+  border: none;
+  margin-bottom: 10px;
+}
+
+.caption {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
